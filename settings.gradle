@@ -5,4 +5,5 @@ include 'baseball-game'
 include 'bank-kata'
 include 'string-calculator'
 include 'test-driven-development-by-example'
+include 'lets-play-tdd'
 
