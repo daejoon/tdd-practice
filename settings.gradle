@@ -1,4 +1,5 @@
 rootProject.name = 'tdd-practice'
 
-include 'bank-business', 'baseball-game'
-
+include 'bank-business'
+include 'baseball-game'
+include 'bank-kata'
