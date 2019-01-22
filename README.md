@@ -31,3 +31,5 @@ $ ./gradlew clean test
 - [Bowling Game](bowling/README.md)
 
 - [Movie](movie/README.md)
+
+- [Name Inverter](name-inverter/README.md)

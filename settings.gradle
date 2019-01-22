@@ -11,4 +11,5 @@ include 'closer-to-zero'
 include 'authservice'
 include 'bowling'
 include 'movie'
+include 'name-inverter'
 
