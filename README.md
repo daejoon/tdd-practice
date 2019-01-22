@@ -27,3 +27,5 @@ $ ./gradlew clean test
 - [Closer to zero](closer-to-zero/README.md)
 
 - [Auth Service](authservice/README.md)
+
+- [Bowling Game](bowling/README.md)

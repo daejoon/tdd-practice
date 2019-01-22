@@ -9,4 +9,5 @@ include 'lets-play-tdd'
 include 'prime-number'
 include 'closer-to-zero'
 include 'authservice'
+include 'bowling'
 
