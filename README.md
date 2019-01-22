@@ -29,3 +29,5 @@ $ ./gradlew clean test
 - [Auth Service](authservice/README.md)
 
 - [Bowling Game](bowling/README.md)
+
+- [Movie](movie/README.md)
