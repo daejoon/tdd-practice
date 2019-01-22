@@ -1,4 +1,4 @@
-package com.dddoong2.bowling;
+package com.ddoong2.bowling;
 
 /**
  * Game

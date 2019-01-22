@@ -1,6 +1,5 @@
-package com.dddoong2.movie;
+package com.ddoong2.movie;
 
-import com.ddoong2.movie.Movie;
 import org.junit.Before;
 import org.junit.Test;
 

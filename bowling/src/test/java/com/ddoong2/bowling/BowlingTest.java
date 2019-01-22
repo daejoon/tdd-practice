@@ -1,6 +1,5 @@
 package com.ddoong2.bowling;
 
-import com.dddoong2.bowling.Game;
 import org.junit.Before;
 import org.junit.Test;
 
