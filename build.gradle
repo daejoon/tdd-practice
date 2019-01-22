@@ -3,6 +3,9 @@ repositories {
     mavenCentral()
 }
 
+version = 'v1.19.1'
+
+
 subprojects {
     repositories {
         jcenter()

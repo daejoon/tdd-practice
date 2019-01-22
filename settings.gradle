@@ -3,3 +3,5 @@ rootProject.name = 'tdd-practice'
 include 'bank-business'
 include 'baseball-game'
 include 'bank-kata'
+include 'string-calculator'
+
