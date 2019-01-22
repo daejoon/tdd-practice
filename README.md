@@ -25,3 +25,5 @@ $ ./gradlew clean test
 - [Prime Number](prime-number/README.md)
 
 - [Closer to zero](closer-to-zero/README.md)
+
+- [Auth Service](authservice/README.md)
