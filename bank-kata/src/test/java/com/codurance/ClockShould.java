@@ -18,7 +18,7 @@ public class ClockShould {
         assertThat(date, is("24/04/2015"));
     }
 
-    private class TestableClock extends Clock {
+    private static class TestableClock extends Clock {
 
         @Override
         protected LocalDate today() {
