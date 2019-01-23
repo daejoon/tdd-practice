@@ -3,8 +3,8 @@ repositories {
     mavenCentral()
 }
 
+group = 'com.ddoong2'
 version = 'v1.19.1'
-
 
 subprojects {
     repositories {
