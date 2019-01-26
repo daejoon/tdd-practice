@@ -23,8 +23,8 @@ public class StringCalculator {
         }
     }
 
-    private Integer getSumBySingle(String strNums) {
-        return Integer.valueOf(strNums);
+    private int getSumBySingle(String strNums) {
+        return Integer.parseInt(strNums);
     }
 
     private int getSumByMulti(String strNums) {
