@@ -1,15 +1,12 @@
 # TDD Practice
-
 TDD 연습을 위한 Repository
 
 ## 실행방법
-
 ```
 $ ./gradlew clean test
 ```
 
 ## TDD 주기
-
 1. 작은 테스트를 하나 추가한다.
 1. 모든 테스트를 실행해서 테스트가 실패하는 것을 확인한다.
 1. 조금 수정한다.
@@ -17,7 +14,6 @@ $ ./gradlew clean test
 1. 중복을 제거하기 위해 **리팩토링**을 한다.
 
 ## TDD List
-
 - [Bank Business](bank-business/README.md)
 - [Baseball Game](baseball-game/README.md)
 - [Bank kata](bank-kata/README.md)
