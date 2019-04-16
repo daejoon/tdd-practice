@@ -1,15 +1,17 @@
 rootProject.name = 'tdd-practice'
 
-include 'bank-business'
-include 'baseball-game'
-include 'bank-kata'
-include 'string-calculator'
-include 'test-driven-development-by-example'
-include 'lets-play-tdd'
-include 'prime-number'
-include 'closer-to-zero'
+
 include 'authservice'
+include 'bank-business'
+include 'bank-kata'
+include 'baseball-game'
 include 'bowling'
+include 'closer-to-zero'
+include 'lets-play-tdd'
 include 'movie'
 include 'name-inverter'
+include 'prime-number'
+include 'string-calculator'
+include 'test-driven-development-by-example'
+
 
