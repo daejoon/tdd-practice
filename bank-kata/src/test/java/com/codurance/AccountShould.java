@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.verify;
+import static org.mockito.BDDMockito.then;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AccountShould {
@@ -31,14 +31,14 @@ public class AccountShould {
     public void store_a_deposit_transaction() {
         account.deposit(100);
 
-        verify(transactionRepository).addDeposit(100);
+        then(transactionRepository).should().addDeposit(100);
     }
 
     @Test
     public void store_a_withdrawal_transaction() {
         account.withdraw(100);
 
-        verify(transactionRepository).addWithdrawal(100);
+        then(transactionRepository).should().addWithdrawal(100);
     }
 
     @Test
@@ -48,6 +48,6 @@ public class AccountShould {
 
         account.printStatement();
 
-        verify(statementPrinter).print(transactions);
+        then(statementPrinter).should().print(transactions);
     }
 }

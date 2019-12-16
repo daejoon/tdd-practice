@@ -6,7 +6,9 @@ import org.junit.Test;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.*;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.then;
+import static org.mockito.Mockito.mock;
 
 /**
  * AuthServiceTest
@@ -45,11 +47,11 @@ public class AuthServiceTest {
     }
 
     private void verifyUserFound(String id) {
-        verify(mockUserRepository).findById(id);
+        then(mockUserRepository).should().findById(id);
     }
 
     private void givenUserExists(String id, String password) {
-        when(mockUserRepository.findById(id)).thenReturn(new User(id, password));
+        given(mockUserRepository.findById(id)).willReturn(new User(id, password));
     }
 
     @Test

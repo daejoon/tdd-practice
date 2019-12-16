@@ -11,8 +11,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class StatementPrinterShould {
@@ -31,7 +31,7 @@ public class StatementPrinterShould {
     public void always_print_the_header() {
         statementPrinter.print(NO_TRANSACTIONS);
 
-        verify(console).printLine("DATE | AMOUNT | BALANCE");
+        then(console).should().printLine("DATE | AMOUNT | BALANCE");
     }
 
     @Test
