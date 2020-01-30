@@ -13,5 +13,5 @@ include 'name-inverter'
 include 'prime-number'
 include 'string-calculator'
 include 'test-driven-development-by-example'
-
+include 'leap-year'
 
