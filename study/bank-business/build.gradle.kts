@@ -1,1 +1,1 @@
-group = "com.ddoong2"
+description = "고품질 쾌속 개발을 위한 TDD 실천법과 도구에서 은행계좌 클래스 만들기"

@@ -1,1 +1,1 @@
-group = "com.codurance"
+description = "Bank kata"

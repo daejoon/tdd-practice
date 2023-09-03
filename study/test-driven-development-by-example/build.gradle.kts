@@ -1,1 +1,1 @@
-group = "com.ddoong2"
+description = "TDD By Example"

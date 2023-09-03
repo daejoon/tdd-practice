@@ -1,1 +1,1 @@
-group = "com.ddoong2"
+description = "백명석님 볼링게임"
