@@ -37,14 +37,6 @@ public class CustomerTest {
         addRentalAndAssertPointsAndCharge(title, moveType, daysRented, expectedPoints, expectedCharge);
     }
 
-    public static Stream<Arguments> provideMovieAndExpectedValues() {
-        return Stream.of(
-                Arguments.of("childrenMovie", MovieType.CHILDREN, 3, 1, 1.5),
-                Arguments.of("childrenMovie", MovieType.CHILDREN, 4, 1, 3.0)
-        );
-    }
-
-
     private void addRentalAndAssertPointsAndCharge(String title, MovieType movieType, int daysRented, int expectedPoints, double expectedCharge) {
         // given
         // when
@@ -52,5 +44,16 @@ public class CustomerTest {
         // then
         assertThat(customer.getFrequenceRenterPoints()).isEqualTo(expectedPoints);
         assertThat(customer.getCharge()).isEqualTo(expectedCharge);
+    }
+
+    public static Stream<Arguments> provideMovieAndExpectedValues() {
+        return Stream.of(
+                Arguments.of("childrenMovie", MovieType.CHILDREN, 3, 1, 1.5),
+                Arguments.of("childrenMovie", MovieType.CHILDREN, 4, 1, 3.0),
+                Arguments.of("regularMovie", MovieType.REGULAR, 2, 1, 2.0),
+                Arguments.of("regularMovie", MovieType.REGULAR, 3, 1, 3.5),
+                Arguments.of("newReleaseMovie", MovieType.NEW_RELEASE, 1, 1, 3.0),
+                Arguments.of("newReleaseMovie", MovieType.NEW_RELEASE, 2, 2, 6.0)
+        );
     }
 }
