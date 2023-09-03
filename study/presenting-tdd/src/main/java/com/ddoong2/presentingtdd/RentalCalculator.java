@@ -3,10 +3,10 @@ package com.ddoong2.presentingtdd;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer {
+public class RentalCalculator {
     private List<Rental> rentals = new ArrayList<>();
 
-    public void addRental(String title, MovieType type, int daysRented) {
+    public void addRental(String title, Movie.MovieType type, int daysRented) {
 
         rentals.add(new Rental(title, type, daysRented));
     }
@@ -14,14 +14,14 @@ public class Customer {
     public Integer getFrequenceRenterPoints() {
 
         return rentals.stream()
-                .mapToInt(Rental::getFrequenceRenterPoints)
+                .mapToInt(rental -> rental.getFrequenceRenterPoints(rental.daysRented))
                 .sum();
     }
 
     public Double getCharge() {
 
         return rentals.stream()
-                .mapToDouble(Rental::getCharge)
+                .mapToDouble(rental -> rental.getCharge(rental.daysRented))
                 .sum();
     }
 }

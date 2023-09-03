@@ -1,48 +1,23 @@
 package com.ddoong2.presentingtdd;
 
 public class Rental {
-    String title;
-    MovieType type;
+    Movie movie;
     int daysRented;
 
     public Rental() {
     }
 
-    public Rental(String title, MovieType type, int daysRented) {
+    public Rental(String title, Movie.MovieType type, int daysRented) {
 
-        this.title = title;
-        this.type = type;
+        this.movie = MovieRepository.findMovieBy(title, type);
         this.daysRented = daysRented;
     }
 
-    public void addRental(String title, MovieType type, int daysRented) {
-        this.type = type;
-
-        this.daysRented = daysRented;
+    public Integer getFrequenceRenterPoints(int daysRented1) {
+        return movie.getFrequenceRenterPoints(daysRented1);
     }
 
-    public Integer getFrequenceRenterPoints() {
-        if (type == MovieType.NEW_RELEASE && daysRented > 1) {
-            return 2;
-        }
-        return 1;
-    }
-
-    public Double getCharge() {
-        double charge = 0;
-        if (type == MovieType.CHILDREN) {
-            charge = 1.5;
-            if (daysRented > 3) {
-                charge += (daysRented - 3) * 1.5;
-            }
-        } else if (type == MovieType.REGULAR) {
-            charge = 2;
-            if (daysRented > 2) {
-                charge += (daysRented - 2) * 1.5;
-            }
-        } else if (type == MovieType.NEW_RELEASE) {
-            charge = daysRented * 3;
-        }
-        return charge;
+    public Double getCharge(int daysRented1) {
+        return movie.getCharge(daysRented1);
     }
 }
