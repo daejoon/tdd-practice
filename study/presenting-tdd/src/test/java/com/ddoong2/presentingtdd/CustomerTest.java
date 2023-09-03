@@ -37,6 +37,19 @@ public class CustomerTest {
         addRentalAndAssertPointsAndCharge(title, moveType, daysRented, expectedPoints, expectedCharge);
     }
 
+    @Test
+    void multipleRentals() {
+        customer.addRental("title", MovieType.CHILDREN, 3);
+        customer.addRental("title", MovieType.CHILDREN, 4);
+        customer.addRental("title", MovieType.REGULAR, 2);
+        customer.addRental("title", MovieType.REGULAR, 3);
+        customer.addRental("title", MovieType.NEW_RELEASE, 1);
+        customer.addRental("title", MovieType.NEW_RELEASE, 2);
+
+        assertThat(customer.getFrequenceRenterPoints()).isEqualTo(7);
+        assertThat(customer.getCharge()).isEqualTo(19.0);
+    }
+
     private void addRentalAndAssertPointsAndCharge(String title, MovieType movieType, int daysRented, int expectedPoints, double expectedCharge) {
         // given
         // when
