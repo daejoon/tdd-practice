@@ -22,7 +22,7 @@ subprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher") {
             because("Only needed to run tests in a version of IntelliJ IDEA that bundles older versions")
         }
-        testImplementation("org.junit.jupiter:junit-jupiter-engine")
+        testImplementation("org.junit.jupiter:junit-jupiter")
         testImplementation("org.junit.vintage:junit-vintage-engine")
         testImplementation("org.assertj:assertj-core:3.24.2")
         testImplementation("org.mockito:mockito-core:4.8.1")
